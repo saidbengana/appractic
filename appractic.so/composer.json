@@ -43,7 +43,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Inovector\\Appractic\\": "src",
+            "Inovector\\Mixpost\\": "src/",
+            "Inovector\\Mixpost\\Database\\Factories\\": "database/factories/",
+            "Inovector\\Appractic\\": "src/",
             "Inovector\\Appractic\\Database\\Factories\\": "database/factories"
         },
         "files": [

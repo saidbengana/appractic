@@ -50,6 +50,10 @@ hooks:
         set -e
         composer install --no-interaction --prefer-dist --optimize-autoloader
         cd appractic.so
+        if [ ! -f composer.json ]; then
+            echo "No composer.json found in Laravel directory"
+            exit 1
+        fi
         composer install --no-interaction --prefer-dist --optimize-autoloader
         php artisan optimize:clear
         php artisan config:clear
