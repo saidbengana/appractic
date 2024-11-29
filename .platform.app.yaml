@@ -15,7 +15,7 @@ relationships:
 web:
     locations:
         "/":
-            root: "public"
+            root: "appractic.so/public"
             index:
                 - index.php
             scripts:
@@ -26,30 +26,32 @@ web:
 disk: 2048
 
 mounts:
-    'storage/app/public':
+    'appractic.so/storage/app/public':
         source: local
         source_path: 'public'
-    'storage/framework/views':
+    'appractic.so/storage/framework/views':
         source: local
         source_path: 'views'
-    'storage/framework/sessions':
+    'appractic.so/storage/framework/sessions':
         source: local
         source_path: 'sessions'
-    'storage/framework/cache':
+    'appractic.so/storage/framework/cache':
         source: local
         source_path: 'cache'
-    'storage/logs':
+    'appractic.so/storage/logs':
         source: local
         source_path: 'logs'
-    'bootstrap/cache':
+    'appractic.so/bootstrap/cache':
         source: local
         source_path: 'cache'
 
 hooks:
     build: |
         set -e
+        cd appractic.so
         composer install --no-dev --prefer-dist --optimize-autoloader
         php artisan optimize:clear
         php artisan optimize
     deploy: |
+        cd appractic.so
         php artisan migrate --force
