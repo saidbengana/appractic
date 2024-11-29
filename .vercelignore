@@ -1,0 +1,17 @@
+/vendor
+/storage/*.key
+/node_modules
+.env
+.env.*
+*.log
+.git*
+.idea
+.vscode
+README.md
+.editorconfig
+.styleci.yml
+_ide_helper.php
+_ide_helper_models.php
+.phpstorm.meta.php
+auth.json
+*.cache
