@@ -5,6 +5,12 @@
     "require": {
         "php": "^8.1"
     },
+    "autoload": {
+        "psr-4": {
+            "Inovector\\Mixpost\\": "appractic.so/src/",
+            "Inovector\\Appractic\\": "appractic.so/src/"
+        }
+    },
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
