@@ -1,0 +1,55 @@
+name: app
+
+type: php:8.2
+
+build:
+    flavor: composer
+
+dependencies:
+    php:
+        composer/composer: '^2'
+
+relationships:
+    database: "database:mysql"
+
+web:
+    locations:
+        "/":
+            root: "public"
+            index:
+                - index.php
+            scripts:
+                - auto_prepend_file: null
+            allow: true
+            passthru: "/index.php"
+
+disk: 2048
+
+mounts:
+    'storage/app/public':
+        source: local
+        source_path: 'public'
+    'storage/framework/views':
+        source: local
+        source_path: 'views'
+    'storage/framework/sessions':
+        source: local
+        source_path: 'sessions'
+    'storage/framework/cache':
+        source: local
+        source_path: 'cache'
+    'storage/logs':
+        source: local
+        source_path: 'logs'
+    'bootstrap/cache':
+        source: local
+        source_path: 'cache'
+
+hooks:
+    build: |
+        set -e
+        composer install --no-dev --prefer-dist --optimize-autoloader
+        php artisan optimize:clear
+        php artisan optimize
+    deploy: |
+        php artisan migrate --force
