@@ -15,7 +15,7 @@ relationships:
 web:
     locations:
         "/":
-            root: "appractic.so/public"
+            root: "public"
             index:
                 - index.php
             scripts:
@@ -26,22 +26,22 @@ web:
 disk: 2048
 
 mounts:
-    'appractic.so/storage/app/public':
+    'storage/app/public':
         source: local
         source_path: 'public'
-    'appractic.so/storage/framework/views':
+    'storage/framework/views':
         source: local
         source_path: 'views'
-    'appractic.so/storage/framework/sessions':
+    'storage/framework/sessions':
         source: local
         source_path: 'sessions'
-    'appractic.so/storage/framework/cache':
+    'storage/framework/cache':
         source: local
         source_path: 'cache'
-    'appractic.so/storage/logs':
+    'storage/logs':
         source: local
         source_path: 'logs'
-    'appractic.so/bootstrap/cache':
+    'bootstrap/cache':
         source: local
         source_path: 'cache'
 
@@ -49,20 +49,10 @@ hooks:
     build: |
         set -e
         composer install --no-interaction --prefer-dist --optimize-autoloader
-        cd appractic.so
-        if [ ! -f composer.json ]; then
-            echo "No composer.json found in Laravel directory"
-            exit 1
-        fi
-        composer install --no-interaction --prefer-dist --optimize-autoloader
-        php artisan optimize:clear
-        php artisan config:clear
-        php artisan cache:clear
-        php artisan view:clear
-        php artisan storage:link
     deploy: |
-        cd appractic.so
-        php artisan migrate --force
+        set -e
+        php artisan cache:clear
         php artisan config:cache
         php artisan route:cache
         php artisan view:cache
+        php artisan storage:link
