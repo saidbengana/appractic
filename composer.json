@@ -22,10 +22,9 @@
     },
     "autoload": {
         "psr-4": {
-            "Inovector\\Mixpost\\": ["appractic.so/src/"],
-            "Inovector\\Mixpost\\Database\\Factories\\": ["appractic.so/database/factories/"],
-            "Inovector\\Appractic\\": ["appractic.so/src/"],
-            "Inovector\\Appractic\\Database\\Factories\\": ["appractic.so/database/factories/"]
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {
