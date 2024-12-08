@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Laravel</title>
+        <title>Appractic</title>
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
@@ -17,6 +17,12 @@
             }
             .container {
                 text-align: center;
+                padding: 2rem;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                max-width: 600px;
+                width: 90%;
             }
             h1 {
                 color: #2d3748;
@@ -26,13 +32,20 @@
             p {
                 color: #4a5568;
                 margin-bottom: 2rem;
+                line-height: 1.6;
+            }
+            .logo {
+                margin-bottom: 2rem;
+                font-size: 3rem;
+                color: #4299e1;
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <h1>Welcome to Laravel on Platform.sh</h1>
-            <p>Your application is now running on Platform.sh!</p>
+            <div class="logo">🚀</div>
+            <h1>Welcome to Appractic</h1>
+            <p>Your application is ready to go! Start building something amazing.</p>
         </div>
     </body>
 </html>
