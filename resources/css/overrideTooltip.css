@@ -1,0 +1,8 @@
+.v-popper__inner {
+    @apply bg-stone-800 text-white text-sm py-1 px-2 rounded shadow-lg;
+}
+
+.v-popper__arrow-inner,
+.v-popper__arrow-outer {
+    @apply border-stone-800;
+}

@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "@headlessui/vue": "^1.7.23",
+    "@inertiajs/vue3": "^1.2.0",
+    "@jaames/iro": "^5.5.2",
+    "@tiptap/core": "^2.2.3",
+    "@tiptap/extension-document": "^2.2.3",
+    "@tiptap/extension-history": "^2.2.3",
+    "@tiptap/extension-link": "^2.2.3",
+    "@tiptap/extension-placeholder": "^2.2.3",
+    "@tiptap/extension-text": "^2.2.3",
+    "@tiptap/extension-typography": "^2.2.3",
+    "@tiptap/pm": "^2.2.3",
+    "@tiptap/vue-3": "^2.0.0-beta.96",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "axios": "^1.7.9",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
+    "emoji-mart-vue-fast": "^11.1.1",
+    "floating-vue": "^5.2.2",
+    "laravel-vite-plugin": "^1.1.1",
+    "mitt": "^3.0.1",
+    "vue": "^3.5.13",
+    "vue-flatpickr-component": "^9.0.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.9",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16"
+  }
+}
