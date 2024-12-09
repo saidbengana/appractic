@@ -23,7 +23,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Inertia\ServiceProvider::class,
+        \Inertia\ServiceProvider::class,
     ])->toArray(),
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
